@@ -1,0 +1,12 @@
+{
+  "text.autoconfig.waymoreicons.title": "Way More Icons",
+  "text.autoconfig.waymoreicons.option.enabled": "Enabled",
+  "text.autoconfig.waymoreicons.option.useOldIcon": "Use pre ~1.20 icon",
+  "text.autoconfig.waymoreicons.option.iconSize": "Icon scale",
+  "text.autoconfig.waymoreicons.option.iconSize.@Tooltip": "Old Icon only goes up to 2x",
+  "text.autoconfig.waymoreicons.option.iconSize.@PrefixText": "LOD of the icon: 16x, 32x, 48x, 128x, 256x",
+  "text.autoconfig.waymoreicons.option.preferNonDefaultGpu": "Attempt to use the non-default GPU for rendering",
+  "text.autoconfig.waymoreicons.option.preferNonDefaultGpu.@Tooltip": "May or may not work...",
+  "text.autoconfig.waymoreicons.option.useCustomIcon": "Use custom window icon",
+  "text.autoconfig.waymoreicons.option.customIconPath": "Full path to custom icon file"
+}
