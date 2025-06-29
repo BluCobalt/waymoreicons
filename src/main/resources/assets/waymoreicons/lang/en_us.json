@@ -1,0 +1,6 @@
+{
+  "text.autoconfig.waymoreicons.option.preferNonDefaultGpu": "Attempt to use the non-default GPU for rendering",
+  "text.autoconfig.waymoreicons.option.preferNonDefaultGpu.@Tooltip": "This option is only effective if you have a system with multiple GPUs, such as a laptop with an integrated GPU and a dedicated GPU. Enabling this option will attempt to use the non-default GPU for rendering, which may improve performance in some cases.",
+  "text.autoconfig.waymoreicons.option.useCustomIcon": "Use custom window icon",
+  "text.autoconfig.waymoreicons.option.customIconPath": "Full path to custom icon file"
+}

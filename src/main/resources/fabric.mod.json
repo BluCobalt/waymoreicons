@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "waymore-icons",
+  "version": "${version}",
+  "name": "waymore-icons",
+  "description": "Proper icon setting on wayland",
+  "authors": [],
+  "contact": {},
+  "license": "LGPL-3.0",
+  "icon": "assets/waymore-icons/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "dev.blucobalt.waymoreIcons.client.WaymoreIconsDataGenerator"
+    ],
+    "client": [
+      "dev.blucobalt.waymoreIcons.client.WaymoreIconsClient"
+    ],
+    "main": [
+      "dev.blucobalt.waymoreIcons.WaymoreIcons"
+    ]
+  },
+  "mixins": [
+    "waymore-icons.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version}"
+  }
+}
