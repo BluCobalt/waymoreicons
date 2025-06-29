@@ -1,11 +1,11 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "dev.blucobalt.waymoreIcons.mixin",
-  "compatibilityLevel": "JAVA_21",
-  "mixins": [
-  ],
+  "package": "dev.blucobalt.waymoreicons.mixin",
+  "compatibilityLevel": "JAVA_8",
   "client": [
+    "GLFWMixin",
+    "MinecraftClientMixin"
   ],
   "injectors": {
     "defaultRequire": 1

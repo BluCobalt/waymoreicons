@@ -3,16 +3,15 @@ package dev.blucobalt.waymoreicons;
 
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
+import me.shedaniel.autoconfig.AutoConfig;
 
 
-public class WaymoreIconsModMenuIntegration
+public class WMIModMenuEntry
     implements ModMenuApi
 {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory()
     {
-        return parent -> {
-            ConfigScreenFa
-        };
+        return parent -> AutoConfig.getConfigScreen(WayMoreIconsConfigCC.class, parent).get();
     }
 }

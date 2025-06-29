@@ -1,30 +1,32 @@
 {
   "schemaVersion": 1,
-  "id": "waymore-icons",
+  "id": "waymoreicons",
   "version": "${version}",
-  "name": "waymore-icons",
-  "description": "Proper icon setting on wayland",
-  "authors": [],
-  "contact": {},
+  "name": "WayMoreIcons",
+  "description": "Simple mod that adds support for setting the window icon when running under Wayland.",
+  "authors": ["blucobalt"],
+  "contact": {
+    "sources": "https://github.com/blucobalt/realmsfix"
+  },
   "license": "LGPL-3.0",
-  "icon": "assets/waymore-icons/icon.png",
+  "icon": "assets/waymoreicons/icon.png",
   "environment": "client",
   "entrypoints": {
-    "fabric-datagen": [
-      "dev.blucobalt.waymoreIcons.client.WaymoreIconsDataGenerator"
-    ],
     "client": [
-      "dev.blucobalt.waymoreIcons.client.WaymoreIconsClient"
+      "dev.blucobalt.waymoreicons.WayMoreIcons"
     ],
-    "main": [
-      "dev.blucobalt.waymoreIcons.WaymoreIcons"
+    "modmenu": [
+      "dev.blucobalt.waymoreicons.WMIModMenuEntry"
     ]
   },
   "mixins": [
     "waymore-icons.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=${loader_version}",
-    "minecraft": "${minecraft_version}"
+    "minecraft": ">=1.14"
+  },
+  "suggests": {
+    "modmenu": "*",
+    "cloth-config": "*"
   }
 }

@@ -1,13 +1,7 @@
 package dev.blucobalt.waymoreicons;
 
 
-import me.shedaniel.autoconfig.ConfigData;
-import me.shedaniel.autoconfig.annotation.Config;
-
-
-@Config(name = "waymoreicons")
 public class WayMoreIconsConfig
-    implements ConfigData
 {
     static final WayMoreIconsConfig backup = new WayMoreIconsConfig();
 
@@ -17,9 +11,22 @@ public class WayMoreIconsConfig
 
     public int iconSize = 4;
 
+
     public boolean preferNonDefaultGpu = false;
 
     public boolean useCustomIcon = false;
 
     public String customIconPath = "";
+
+    public WayMoreIconsConfig(WayMoreIconsConfigCC configCC)
+    {
+        this.enabled = configCC.enabled;
+        this.useOldIcon = configCC.useOldIcon;
+        this.iconSize = configCC.iconSize;
+        this.preferNonDefaultGpu = configCC.preferNonDefaultGpu;
+        this.useCustomIcon = configCC.useCustomIcon;
+        this.customIconPath = configCC.customIconPath;
+    }
+
+    private WayMoreIconsConfig() {}
 }
