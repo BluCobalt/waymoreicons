@@ -8,5 +8,5 @@
   "text.autoconfig.waymoreicons.option.preferNonDefaultGpu": "Attempt to use the non-default GPU for rendering",
   "text.autoconfig.waymoreicons.option.preferNonDefaultGpu.@Tooltip": "May or may not work...",
   "text.autoconfig.waymoreicons.option.useCustomIcon": "Use custom window icon",
-  "text.autoconfig.waymoreicons.option.customIconPath": "Full path to custom icon file"
+  "text.autoconfig.waymoreicons.option.customIconPath": "Relative path to .minecraft, or absolute path to icon file. PNG preferred."
 }

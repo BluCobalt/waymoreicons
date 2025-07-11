@@ -18,7 +18,7 @@ public class WayMoreIconsConfigCC
     public boolean useOldIcon = false;
 
     @Tooltip
-    @BoundedDiscrete(min = 0L, max = 5L)
+    @BoundedDiscrete(min = 1L, max = 5L)
     @PrefixText
     public int iconSize = 4;
 

@@ -4,6 +4,7 @@ package dev.blucobalt.waymoreicons;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.Toml4jConfigSerializer;
 import net.fabricmc.api.ClientModInitializer;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.SharedConstants;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -139,6 +140,10 @@ public class WayMoreIcons
     {
         if (getConfig().useCustomIcon) {
             Path customIconPath = Paths.get(getConfig().customIconPath);
+
+            if (!customIconPath.isAbsolute())
+                customIconPath = Paths.get(FabricLoader.getInstance().getGameDir().toString(), customIconPath.toString());
+
             if (Files.exists(customIconPath)) {
                 try {
                     Files.copy(customIconPath, this.iconPath);
