@@ -79,29 +79,29 @@ public class WayMoreIcons
 
     public static WayMoreIconsConfig getConfig()
     {
-        if (INSTANCE == null)
-        {
-            throw new IllegalStateException("WayMoreIcons has not been initialized yet.");
-        }
-
-        WayMoreIconsConfig config;
-
-        try {
-            if (!INSTANCE.goodConfig)
-                AutoConfig.register(WayMoreIconsConfigCC.class, Toml4jConfigSerializer::new);
-            config = new WayMoreIconsConfig(AutoConfig.getConfigHolder(WayMoreIconsConfigCC.class).getConfig());
-        } catch (NoClassDefFoundError e)
-        {
-            if (!INSTANCE.goodConfig)
-                LOGGER.warn("[WMI] Cloth Config not found. using default config.");
-            config = WayMoreIconsConfig.backup;
-        } catch (Exception e)
-        {
-            LOGGER.error("[WMI] failed to load config. using default config.", e);
-            config = WayMoreIconsConfig.backup;
-        }
+//        if (INSTANCE == null)
+//        {
+//            throw new IllegalStateException("WayMoreIcons has not been initialized yet.");
+//        }
+//
+//        WayMoreIconsConfig config;
+//
+//        try {
+//            if (!INSTANCE.goodConfig)
+//                AutoConfig.register(WayMoreIconsConfigCC.class, Toml4jConfigSerializer::new);
+//            config = new WayMoreIconsConfig(AutoConfig.getConfigHolder(WayMoreIconsConfigCC.class).getConfig());
+//        } catch (NoClassDefFoundError e)
+//        {
+//            if (!INSTANCE.goodConfig)
+//                LOGGER.warn("[WMI] Cloth Config not found. using default config.");
+//            config = WayMoreIconsConfig.backup;
+//        } catch (Exception e)
+//        {
+//            LOGGER.error("[WMI] failed to load config. using default config.", e);
+//            config = WayMoreIconsConfig.backup;
+//        }
         INSTANCE.goodConfig = true;
-        return config;
+        return WayMoreIconsConfig.backup;
     }
 
     @Override
@@ -158,45 +158,45 @@ public class WayMoreIcons
             }
         }
 
-        String icon = "/assets/waymoreicons/icons";
-
-        if (getConfig().useOldIcon) {
-            if (getConfig().iconSize == 1) {
-                icon += "/old/icon_16x16.png";
-            } else {
-                icon += "/old/icon_32x32.png";
-            }
-        } else {
-            try {
-                if (!SharedConstants.getGameVersion().stable()) {
-                    icon += "/snapshot";
-                }
-            } catch (NoSuchMethodError ignored) {
-                LOGGER.warn("[WMI] not detecting snapshot version, assuming stable");
-            }
-            switch (getConfig().iconSize) {
-                case 1:
-                    icon += "/icon_16x16.png";
-                    break;
-                case 2:
-                    icon += "/icon_32x32.png";
-                    break;
-                case 3:
-                    icon += "/icon_48x48.png";
-                    break;
-                case 4:
-                    icon += "/icon_128x128.png";
-                    break;
-                case 5:
-                    icon += "/icon_256x256.png";
-                    break;
-                default:
-                    LOGGER.error(new IllegalStateException("icon size " + getConfig().iconSize
-                                                           + " is not supported! falling back to 128x128"));
-                    icon += "/icon_128x128.png";
-                    break;
-            }
-        }
+        String icon = "/assets/waymoreicons/icons/ed_default_icon_256x256.png";
+//
+//        if (getConfig().useOldIcon) {
+//            if (getConfig().iconSize == 1) {
+//                icon += "/old/icon_16x16.png";
+//            } else {
+//                icon += "/old/icon_32x32.png";
+//            }
+//        } else {
+//            try {
+//                if (!SharedConstants.getGameVersion().stable()) {
+//                    icon += "/snapshot";
+//                }
+//            } catch (NoSuchMethodError ignored) {
+//                LOGGER.warn("[WMI] not detecting snapshot version, assuming stable");
+//            }
+//            switch (getConfig().iconSize) {
+//                case 1:
+//                    icon += "/icon_16x16.png";
+//                    break;
+//                case 2:
+//                    icon += "/icon_32x32.png";
+//                    break;
+//                case 3:
+//                    icon += "/icon_48x48.png";
+//                    break;
+//                case 4:
+//                    icon += "/icon_128x128.png";
+//                    break;
+//                case 5:
+//                    icon += "/icon_256x256.png";
+//                    break;
+//                default:
+//                    LOGGER.error(new IllegalStateException("icon size " + getConfig().iconSize
+//                                                           + " is not supported! falling back to 128x128"));
+//                    icon += "/icon_128x128.png";
+//                    break;
+//            }
+//        }
 
         try {
             InputStream iconIs = this.getClass().getResourceAsStream(icon);

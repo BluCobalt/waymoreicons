@@ -2,6 +2,13 @@
 Simple mod that adds support for setting the window icon when running under Wayland.
 ![1.21.6 window, with the Minecraft icon, shown running under Wayland with xeyes](./readme.png)
 
+## Elysium branch
+At the request of Fyoncle, this is a custom version that shows the ED icon and removes the config screen.
+### Changes:
+- gradle.properties: version is appended with `-elysium`
+- fabric.mod.json: references to modmenu and cloth config are removed
+- dev.blucobalt.waymoreicons.WayMoreIcons: cloth config initialization is removed, the config is made immutable, and the logic to change icon size is removed
+- assets/waymoreicons/icons: everything else is removed, leaving only the 256x256 ED icon
 
 ## Note
 Icon assets were retrieved from the following sources:

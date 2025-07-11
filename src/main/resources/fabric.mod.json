@@ -14,9 +14,6 @@
   "entrypoints": {
     "client": [
       "dev.blucobalt.waymoreicons.WayMoreIcons"
-    ],
-    "modmenu": [
-      "dev.blucobalt.waymoreicons.WMIModMenuEntry"
     ]
   },
   "mixins": [
@@ -24,9 +21,5 @@
   ],
   "depends": {
     "minecraft": ">=1.14"
-  },
-  "suggests": {
-    "modmenu": "*",
-    "cloth-config": "*"
   }
 }
